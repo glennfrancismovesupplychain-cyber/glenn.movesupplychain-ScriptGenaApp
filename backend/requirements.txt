@@ -1,0 +1,16 @@
+# Backend requirements
+fastapi==0.111.0
+uvicorn[standard]==0.30.1
+python-multipart==0.0.9
+
+# PDF Processing
+pdfplumber==0.11.1
+
+# PowerPoint Processing
+python-pptx==1.0.1
+
+# AI/LLM Integration (CPU version)
+llama-cpp-python==0.2.78
+
+# Utilities
+python-dotenv==1.0.1

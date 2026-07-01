@@ -1,0 +1,17 @@
+# Frontend dependencies (React, Tailwind CSS, Vite)
+node_modules/
+
+# Backend dependencies and models
+venv/
+*.egg-info/
+__pycache__/
+
+# Model files (typically 2-5GB each)
+models/*.gguf
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
