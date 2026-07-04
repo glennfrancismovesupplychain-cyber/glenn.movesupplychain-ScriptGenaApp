@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* CSS Reset & Base Styles */
 * {
   margin: 0;
@@ -42,15 +46,15 @@ code {
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
+  background: linear-gradient(135deg, #0F80CB 0%, #0C69A3 50%, #0F80CB 100%);
   border-radius: 12px;
   transition: all 0.3s ease;
   border: 3px solid rgba(15, 23, 42, 0.5);
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 50%, #6366f1 100%);
-  box-shadow: 0 0 15px rgba(139, 92, 246, 0.4);
+  background: linear-gradient(135deg, #0C69A3 0%, #0A538A 50%, #0F80CB 100%);
+  box-shadow: 0 0 15px rgba(15, 128, 203, 0.4);
   border: 3px solid rgba(15, 23, 42, 0.3);
 }
 
@@ -60,12 +64,12 @@ body.light-theme .custom-scrollbar::-webkit-scrollbar-track {
 }
 
 body.light-theme .custom-scrollbar::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
+  background: linear-gradient(135deg, #0F80CB 0%, #0C69A3 50%, #0A538A 100%);
   border: 3px solid rgba(226, 235, 244, 0.5);
 }
 
 body.light-theme .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 50%, #6366f1 100%);
+  background: linear-gradient(135deg, #0C69A3 0%, #0A538A 50%, #0F80CB 100%);
   border: 3px solid rgba(226, 235, 244, 0.3);
 }
 
@@ -233,6 +237,85 @@ body.light-theme .gradient-text {
 .animate-gradient-x {
   background-size: 200% 200%;
   animation: gradient-x 3s ease infinite;
+}
+
+/* Improved animations */
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* Smooth transitions for all interactive elements */
+* {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+/* Better scrollbar for Windows */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 8px;
+  border: 3px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+  background-clip: content-box;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #475569;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+/* Input focus effects */
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.3);
+}
+
+/* Button active states */
+button:active {
+  transform: scale(0.98);
+}
+
+/* Card shadow utilities */
+.shadow-card {
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+}
+
+.dark .shadow-card {
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.5);
+}
+
+/* Fade animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-down {
+  animation: fadeInDown 0.4s ease-out forwards;
 }
 
 /* Text colors */
